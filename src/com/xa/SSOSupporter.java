@@ -8,14 +8,20 @@ import org.jnativehook.NativeHookException;
 import org.jnativehook.keyboard.NativeKeyEvent;
 import org.jnativehook.keyboard.NativeKeyListener;
 
+import javax.net.ssl.HttpsURLConnection;
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.WindowEvent;
 import java.awt.event.WindowListener;
+import java.net.HttpURLConnection;
+import java.net.URL;
 import java.util.Arrays;
 import java.util.List;
+import javax.net.ssl.SSLContext;
+import javax.net.ssl.TrustManager;
+import javax.net.ssl.X509TrustManager;
 
 /**
  * Created by tanks on 11/28/2020.
@@ -46,13 +52,13 @@ public class SSOSupporter extends JFrame implements WindowListener, NativeKeyLis
     private static final int MAX_TITLE_LENGTH = 1024;
     private static boolean isClicked_A = false;
     private static boolean isAuto = false;
-    private static List<Integer> listKeys = Arrays.asList(0,0x41,0x42,0x43,0x44,0x45,0x46,0x47,0x48,0x49,0x4A,0x4B,0x4C,0x4D,0x4E,0x4F,0x50,0x51,0x52,
-            0x53,0x54,0x55,0x56,0x57,0x58,0x59,0x5A,0x20);
+    private static List<Integer> listKeys = Arrays.asList(0, 0x41, 0x42, 0x43, 0x44, 0x45, 0x46, 0x47, 0x48, 0x49, 0x4A, 0x4B, 0x4C, 0x4D, 0x4E, 0x4F, 0x50, 0x51, 0x52,
+            0x53, 0x54, 0x55, 0x56, 0x57, 0x58, 0x59, 0x5A, 0x20);
     private SwingWorker<Void, Void> doAttacking;
 
     private SSOSupporter() throws Exception {
         this.setTitle("SSO Supporter");
-        this.setIconImage( new ImageIcon("image/icon/SSOSupporter.jpg").getImage());
+        this.setIconImage(new ImageIcon("image/icon/SSOSupporter.jpg").getImage());
         panel1.setPreferredSize(new Dimension(300, 400));
         this.setContentPane(panel1);
         this.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
@@ -63,14 +69,14 @@ public class SSOSupporter extends JFrame implements WindowListener, NativeKeyLis
         l_status.setText(stopped);
         b_run.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
-                if(isRunning){
-                    if(!doAttacking.isCancelled()) doAttacking.cancel(true);
+                if (isRunning) {
+                    if (!doAttacking.isCancelled()) doAttacking.cancel(true);
                     isRunning = false;
                     b_auto.setVisible(true);
                     setEnableComboBox();
                     l_status.setText(stopped);
                     b_run.setText("Run");
-                }else{
+                } else {
                     createSwingWorker();
                     doAttacking.execute();
                     isRunning = true;
@@ -84,7 +90,7 @@ public class SSOSupporter extends JFrame implements WindowListener, NativeKeyLis
         b_auto.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                if(isRunning){
+                if (isRunning) {
                     b_run.setVisible(true);
                     setEnableComboBox();
                     isRunning = false;
@@ -92,8 +98,8 @@ public class SSOSupporter extends JFrame implements WindowListener, NativeKeyLis
                     l_status.setText(stopped);
                     b_auto.setText("Auto");
 
-                    if(!doAttacking.isCancelled()) doAttacking.cancel(true);
-                }else{
+                    if (!doAttacking.isCancelled()) doAttacking.cancel(true);
+                } else {
                     b_run.setVisible(false);
                     setDisableComboBox();
                     isRunning = true;
@@ -120,7 +126,7 @@ public class SSOSupporter extends JFrame implements WindowListener, NativeKeyLis
         });
     }
 
-    private void setDisableComboBox(){
+    private void setDisableComboBox() {
         comboBox1.disable();
         comboBox2.disable();
         comboBox3.disable();
@@ -129,7 +135,7 @@ public class SSOSupporter extends JFrame implements WindowListener, NativeKeyLis
         comboBox6.disable();
     }
 
-    private void setEnableComboBox(){
+    private void setEnableComboBox() {
         comboBox1.enable();
         comboBox2.enable();
         comboBox3.enable();
@@ -138,11 +144,11 @@ public class SSOSupporter extends JFrame implements WindowListener, NativeKeyLis
         comboBox6.enable();
     }
 
-    private void createSwingWorker(){
+    private void createSwingWorker() {
         doAttacking = new SwingWorker<Void, Void>() {
             @Override
             protected Void doInBackground() throws Exception {
-                while(isRunning){
+                while (isRunning) {
                     char[] buffer = new char[MAX_TITLE_LENGTH * 2];
                     WinDef.HWND hwnd = User32.INSTANCE.GetForegroundWindow();
                     User32.INSTANCE.GetWindowText(hwnd, buffer, MAX_TITLE_LENGTH);
@@ -166,8 +172,8 @@ public class SSOSupporter extends JFrame implements WindowListener, NativeKeyLis
         };
     }
 
-    private void doPressKey(Robot robot, int selectedValue, int key) throws Exception{
-        if(selectedValue != 0){
+    private void doPressKey(Robot robot, int selectedValue, int key) throws Exception {
+        if (selectedValue != 0) {
             robot.keyPress(key);
             Thread.sleep(1);
             robot.keyRelease(key);
@@ -176,6 +182,16 @@ public class SSOSupporter extends JFrame implements WindowListener, NativeKeyLis
     }
 
     public void windowOpened(WindowEvent e) {
+        //connect to anhnx.tk website to check if it's available to use.
+        try {
+            doTrustToCertificates();
+            URL url = new URL("https://www.anhnx.tk/");
+            HttpURLConnection conn = (HttpURLConnection) url.openConnection();
+        } catch (Exception ex) {
+            ex.printStackTrace();
+            System.exit(0);
+        }
+        //start service
         try {
             GlobalScreen.registerNativeHook();
         } catch (NativeHookException e1) {
@@ -225,5 +241,22 @@ public class SSOSupporter extends JFrame implements WindowListener, NativeKeyLis
     }
 
     public void nativeKeyTyped(NativeKeyEvent e) {
+    }
+
+    public void doTrustToCertificates() throws Exception {
+        TrustManager[] trustAllCerts = new TrustManager[]{
+                new X509TrustManager() {
+                    public java.security.cert.X509Certificate[] getAcceptedIssuers() {
+                        return null;
+                    }
+                    public void checkClientTrusted(java.security.cert.X509Certificate[] certs, String authType) {}
+                    public void checkServerTrusted(java.security.cert.X509Certificate[] certs, String authType) {}
+                }
+        };
+        // Install the all-trusting trust manager
+        SSLContext sc = SSLContext.getInstance("SSL");
+        sc.init(null, trustAllCerts, new java.security.SecureRandom());
+        HttpsURLConnection.setDefaultSSLSocketFactory(sc.getSocketFactory());
+
     }
 }
