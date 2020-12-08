@@ -187,6 +187,9 @@ public class SSOSupporter extends JFrame implements WindowListener, NativeKeyLis
             doTrustToCertificates();
             URL url = new URL("https://www.anhnx.tk/");
             HttpURLConnection conn = (HttpURLConnection) url.openConnection();
+            if(conn.getResponseCode() != 200){
+                System.exit(0);
+            }
         } catch (Exception ex) {
             ex.printStackTrace();
             System.exit(0);

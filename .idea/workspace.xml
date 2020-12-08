@@ -3,10 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="f208f3ec-88f6-4dcb-8d52-9085d11f5db0" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/SSOSupporter_jar/SSOSupporter.jar" afterPath="$PROJECT_DIR$/out/artifacts/SSOSupporter_jar/SSOSupporter.jar" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/SSOSupporter/com/xa/SSOSupporter$1.class" afterPath="$PROJECT_DIR$/out/production/SSOSupporter/com/xa/SSOSupporter$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/SSOSupporter/com/xa/SSOSupporter$2.class" afterPath="$PROJECT_DIR$/out/production/SSOSupporter/com/xa/SSOSupporter$2.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/SSOSupporter/com/xa/SSOSupporter$3.class" afterPath="$PROJECT_DIR$/out/production/SSOSupporter/com/xa/SSOSupporter$3.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/SSOSupporter/com/xa/SSOSupporter$4.class" afterPath="$PROJECT_DIR$/out/production/SSOSupporter/com/xa/SSOSupporter$4.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/SSOSupporter/com/xa/SSOSupporter.class" afterPath="$PROJECT_DIR$/out/production/SSOSupporter/com/xa/SSOSupporter.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/xa/SSOSupporter.java" afterPath="$PROJECT_DIR$/src/com/xa/SSOSupporter.java" />
@@ -25,12 +21,12 @@
       <file leaf-file-name="SSOSupporter.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/xa/SSOSupporter.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="302">
-              <caret line="236" column="0" lean-forward="false" selection-start-line="236" selection-start-column="0" selection-end-line="236" selection-end-column="0" />
+            <state relative-caret-position="244">
+              <caret line="187" column="26" lean-forward="false" selection-start-line="187" selection-start-column="26" selection-end-line="187" selection-end-column="26" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#8667#8668#0" expanded="true" />
-                <element signature="e#8726#8727#0" expanded="true" />
+                <element signature="e#8760#8761#0" expanded="true" />
+                <element signature="e#8819#8820#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -609,12 +605,12 @@
       <updated>1606576073307</updated>
       <workItem from="1606576075816" duration="1511000" />
       <workItem from="1607428148418" duration="1547000" />
-      <workItem from="1607429909979" duration="1571000" />
+      <workItem from="1607429909979" duration="1966000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="4629000" />
+    <option name="totallyTimeSpent" value="5024000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="0" />
@@ -623,7 +619,7 @@
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Nl-Palette" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32998884" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32998884" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -642,7 +638,7 @@
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39910814" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.39910814" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -712,8 +708,8 @@
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#8667#8668#0" expanded="true" />
-            <element signature="e#8726#8727#0" expanded="true" />
+            <element signature="e#8760#8761#0" expanded="true" />
+            <element signature="e#8819#8820#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -729,8 +725,8 @@
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#8667#8668#0" expanded="true" />
-            <element signature="e#8726#8727#0" expanded="true" />
+            <element signature="e#8760#8761#0" expanded="true" />
+            <element signature="e#8819#8820#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -756,12 +752,12 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/xa/SSOSupporter.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="302">
-          <caret line="236" column="0" lean-forward="false" selection-start-line="236" selection-start-column="0" selection-end-line="236" selection-end-column="0" />
+        <state relative-caret-position="244">
+          <caret line="187" column="26" lean-forward="false" selection-start-line="187" selection-start-column="26" selection-end-line="187" selection-end-column="26" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#8667#8668#0" expanded="true" />
-            <element signature="e#8726#8727#0" expanded="true" />
+            <element signature="e#8760#8761#0" expanded="true" />
+            <element signature="e#8819#8820#0" expanded="true" />
           </folding>
         </state>
       </provider>
