@@ -3,7 +3,7 @@
   <grid id="27dc6" binding="panel1" default-binding="true" layout-manager="GridLayoutManager" row-count="14" column-count="9" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
     <margin top="10" left="30" bottom="10" right="30"/>
     <constraints>
-      <xy x="20" y="20" width="394" height="639"/>
+      <xy x="20" y="20" width="404" height="639"/>
     </constraints>
     <properties/>
     <border type="none"/>
@@ -343,7 +343,7 @@
       </component>
       <component id="14058" class="javax.swing.JLabel" binding="l_key2">
         <constraints>
-          <grid row="2" column="0" row-span="1" col-span="3" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+          <grid row="2" column="0" row-span="1" col-span="2" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
         </constraints>
         <properties>
           <text value="Key 2"/>

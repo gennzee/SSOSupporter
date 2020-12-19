@@ -77,7 +77,7 @@ public class SSOSupporter extends JFrame implements WindowListener, NativeKeyLis
     private SSOSupporter() throws Exception {
         this.setTitle("Genn's Team");
         this.setIconImage(new ImageIcon("image/icon/SSOSupporter.jpg").getImage());
-        panel1.setPreferredSize(new Dimension(380, 450));
+        panel1.setPreferredSize(new Dimension(480, 450));
         this.setContentPane(panel1);
         this.setResizable(false);
         this.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
@@ -92,7 +92,7 @@ public class SSOSupporter extends JFrame implements WindowListener, NativeKeyLis
                     setEnableZone();
                     isRunning = false;
                     l_status.setText(stopped);
-                    b_run.setText("Run");
+                    b_run.setText(Constants.run);
                     b_auto.setVisible(true);
 
                     if (!doAttacking.isCancelled()) doAttacking.cancel(true);
@@ -100,7 +100,7 @@ public class SSOSupporter extends JFrame implements WindowListener, NativeKeyLis
                     setDisableZone();
                     isRunning = true;
                     l_status.setText(running);
-                    b_run.setText("Stop");
+                    b_run.setText(Constants.stop);
                     b_auto.setVisible(false);
 
                     createSwingWorker();

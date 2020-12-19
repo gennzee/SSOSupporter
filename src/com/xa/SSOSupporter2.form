@@ -1,0 +1,1118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form xmlns="http://www.intellij.com/uidesigner/form/" version="1" bind-to-class="com.xa.SSOSupporter2">
+  <grid id="27dc6" binding="panel1" default-binding="true" layout-manager="GridLayoutManager" row-count="5" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+    <margin top="0" left="0" bottom="10" right="0"/>
+    <constraints>
+      <xy x="20" y="20" width="382" height="493"/>
+    </constraints>
+    <properties/>
+    <border type="none"/>
+    <children>
+      <tabbedpane id="cbcf1" binding="tabbedPane1" default-binding="true">
+        <constraints>
+          <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false">
+            <preferred-size width="200" height="200"/>
+          </grid>
+        </constraints>
+        <properties>
+          <enabled value="true"/>
+        </properties>
+        <border type="none"/>
+        <children>
+          <grid id="80587" layout-manager="GridLayoutManager" row-count="10" column-count="3" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+            <margin top="10" left="20" bottom="10" right="20"/>
+            <constraints>
+              <tabbedpane title="Combo Key"/>
+            </constraints>
+            <properties/>
+            <border type="none"/>
+            <children>
+              <component id="81d5c" class="javax.swing.JLabel">
+                <constraints>
+                  <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties>
+                  <text value="Key 1"/>
+                </properties>
+              </component>
+              <component id="c5512" class="javax.swing.JLabel">
+                <constraints>
+                  <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties>
+                  <text value="Key 2"/>
+                </properties>
+              </component>
+              <component id="f788f" class="javax.swing.JLabel">
+                <constraints>
+                  <grid row="2" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties>
+                  <text value="Key 3"/>
+                </properties>
+              </component>
+              <component id="860fb" class="javax.swing.JLabel">
+                <constraints>
+                  <grid row="3" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties>
+                  <text value="Key 4"/>
+                </properties>
+              </component>
+              <component id="3291" class="javax.swing.JLabel">
+                <constraints>
+                  <grid row="4" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties>
+                  <text value="Key 5"/>
+                </properties>
+              </component>
+              <component id="9e31a" class="javax.swing.JLabel">
+                <constraints>
+                  <grid row="5" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties>
+                  <text value="Key 6"/>
+                </properties>
+              </component>
+              <component id="55204" class="javax.swing.JLabel">
+                <constraints>
+                  <grid row="6" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties>
+                  <text value="Key 7"/>
+                </properties>
+              </component>
+              <component id="c6e11" class="javax.swing.JLabel">
+                <constraints>
+                  <grid row="7" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties>
+                  <text value="Key 8"/>
+                </properties>
+              </component>
+              <component id="f510" class="javax.swing.JLabel">
+                <constraints>
+                  <grid row="8" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties>
+                  <text value="Key 9"/>
+                </properties>
+              </component>
+              <component id="6c391" class="javax.swing.JLabel">
+                <constraints>
+                  <grid row="9" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties>
+                  <text value="Key 10"/>
+                </properties>
+              </component>
+              <component id="a5e54" class="javax.swing.JComboBox" binding="key1">
+                <constraints>
+                  <grid row="0" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="2" anchor="8" fill="1" indent="0" use-parent-layout="false">
+                    <minimum-size width="200" height="-1"/>
+                  </grid>
+                </constraints>
+                <properties>
+                  <model>
+                    <item value="Not selected"/>
+                    <item value="A"/>
+                    <item value="B"/>
+                    <item value="C"/>
+                    <item value="D"/>
+                    <item value="E"/>
+                    <item value="F"/>
+                    <item value="G"/>
+                    <item value="H"/>
+                    <item value="I"/>
+                    <item value="J"/>
+                    <item value="K"/>
+                    <item value="L"/>
+                    <item value="M"/>
+                    <item value="N"/>
+                    <item value="O"/>
+                    <item value="P"/>
+                    <item value="Q"/>
+                    <item value="R"/>
+                    <item value="S"/>
+                    <item value="T"/>
+                    <item value="U"/>
+                    <item value="V"/>
+                    <item value="W"/>
+                    <item value="X"/>
+                    <item value="Y"/>
+                    <item value="Z"/>
+                  </model>
+                </properties>
+              </component>
+              <component id="3f0f8" class="javax.swing.JComboBox" binding="key2">
+                <constraints>
+                  <grid row="1" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="2" anchor="8" fill="1" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties>
+                  <model>
+                    <item value="Not selected"/>
+                    <item value="A"/>
+                    <item value="B"/>
+                    <item value="C"/>
+                    <item value="D"/>
+                    <item value="E"/>
+                    <item value="F"/>
+                    <item value="G"/>
+                    <item value="H"/>
+                    <item value="I"/>
+                    <item value="J"/>
+                    <item value="K"/>
+                    <item value="L"/>
+                    <item value="M"/>
+                    <item value="N"/>
+                    <item value="O"/>
+                    <item value="P"/>
+                    <item value="Q"/>
+                    <item value="R"/>
+                    <item value="S"/>
+                    <item value="T"/>
+                    <item value="U"/>
+                    <item value="V"/>
+                    <item value="W"/>
+                    <item value="X"/>
+                    <item value="Y"/>
+                    <item value="Z"/>
+                  </model>
+                </properties>
+              </component>
+              <component id="eb0bd" class="javax.swing.JComboBox" binding="key3">
+                <constraints>
+                  <grid row="2" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="2" anchor="8" fill="1" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties>
+                  <model>
+                    <item value="Not selected"/>
+                    <item value="A"/>
+                    <item value="B"/>
+                    <item value="C"/>
+                    <item value="D"/>
+                    <item value="E"/>
+                    <item value="F"/>
+                    <item value="G"/>
+                    <item value="H"/>
+                    <item value="I"/>
+                    <item value="J"/>
+                    <item value="K"/>
+                    <item value="L"/>
+                    <item value="M"/>
+                    <item value="N"/>
+                    <item value="O"/>
+                    <item value="P"/>
+                    <item value="Q"/>
+                    <item value="R"/>
+                    <item value="S"/>
+                    <item value="T"/>
+                    <item value="U"/>
+                    <item value="V"/>
+                    <item value="W"/>
+                    <item value="X"/>
+                    <item value="Y"/>
+                    <item value="Z"/>
+                  </model>
+                </properties>
+              </component>
+              <component id="88927" class="javax.swing.JComboBox" binding="key4">
+                <constraints>
+                  <grid row="3" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="2" anchor="8" fill="1" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties>
+                  <model>
+                    <item value="Not selected"/>
+                    <item value="A"/>
+                    <item value="B"/>
+                    <item value="C"/>
+                    <item value="D"/>
+                    <item value="E"/>
+                    <item value="F"/>
+                    <item value="G"/>
+                    <item value="H"/>
+                    <item value="I"/>
+                    <item value="J"/>
+                    <item value="K"/>
+                    <item value="L"/>
+                    <item value="M"/>
+                    <item value="N"/>
+                    <item value="O"/>
+                    <item value="P"/>
+                    <item value="Q"/>
+                    <item value="R"/>
+                    <item value="S"/>
+                    <item value="T"/>
+                    <item value="U"/>
+                    <item value="V"/>
+                    <item value="W"/>
+                    <item value="X"/>
+                    <item value="Y"/>
+                    <item value="Z"/>
+                  </model>
+                </properties>
+              </component>
+              <component id="97ffd" class="javax.swing.JComboBox" binding="key5">
+                <constraints>
+                  <grid row="4" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="2" anchor="8" fill="1" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties>
+                  <model>
+                    <item value="Not selected"/>
+                    <item value="A"/>
+                    <item value="B"/>
+                    <item value="C"/>
+                    <item value="D"/>
+                    <item value="E"/>
+                    <item value="F"/>
+                    <item value="G"/>
+                    <item value="H"/>
+                    <item value="I"/>
+                    <item value="J"/>
+                    <item value="K"/>
+                    <item value="L"/>
+                    <item value="M"/>
+                    <item value="N"/>
+                    <item value="O"/>
+                    <item value="P"/>
+                    <item value="Q"/>
+                    <item value="R"/>
+                    <item value="S"/>
+                    <item value="T"/>
+                    <item value="U"/>
+                    <item value="V"/>
+                    <item value="W"/>
+                    <item value="X"/>
+                    <item value="Y"/>
+                    <item value="Z"/>
+                  </model>
+                </properties>
+              </component>
+              <component id="883af" class="javax.swing.JComboBox" binding="key6">
+                <constraints>
+                  <grid row="5" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="2" anchor="8" fill="1" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties>
+                  <model>
+                    <item value="Not selected"/>
+                    <item value="A"/>
+                    <item value="B"/>
+                    <item value="C"/>
+                    <item value="D"/>
+                    <item value="E"/>
+                    <item value="F"/>
+                    <item value="G"/>
+                    <item value="H"/>
+                    <item value="I"/>
+                    <item value="J"/>
+                    <item value="K"/>
+                    <item value="L"/>
+                    <item value="M"/>
+                    <item value="N"/>
+                    <item value="O"/>
+                    <item value="P"/>
+                    <item value="Q"/>
+                    <item value="R"/>
+                    <item value="S"/>
+                    <item value="T"/>
+                    <item value="U"/>
+                    <item value="V"/>
+                    <item value="W"/>
+                    <item value="X"/>
+                    <item value="Y"/>
+                    <item value="Z"/>
+                  </model>
+                </properties>
+              </component>
+              <component id="4e83e" class="javax.swing.JComboBox" binding="key7">
+                <constraints>
+                  <grid row="6" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="2" anchor="8" fill="1" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties>
+                  <model>
+                    <item value="Not selected"/>
+                    <item value="A"/>
+                    <item value="B"/>
+                    <item value="C"/>
+                    <item value="D"/>
+                    <item value="E"/>
+                    <item value="F"/>
+                    <item value="G"/>
+                    <item value="H"/>
+                    <item value="I"/>
+                    <item value="J"/>
+                    <item value="K"/>
+                    <item value="L"/>
+                    <item value="M"/>
+                    <item value="N"/>
+                    <item value="O"/>
+                    <item value="P"/>
+                    <item value="Q"/>
+                    <item value="R"/>
+                    <item value="S"/>
+                    <item value="T"/>
+                    <item value="U"/>
+                    <item value="V"/>
+                    <item value="W"/>
+                    <item value="X"/>
+                    <item value="Y"/>
+                    <item value="Z"/>
+                  </model>
+                </properties>
+              </component>
+              <component id="6b36a" class="javax.swing.JComboBox" binding="key8">
+                <constraints>
+                  <grid row="7" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="2" anchor="8" fill="1" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties>
+                  <model>
+                    <item value="Not selected"/>
+                    <item value="A"/>
+                    <item value="B"/>
+                    <item value="C"/>
+                    <item value="D"/>
+                    <item value="E"/>
+                    <item value="F"/>
+                    <item value="G"/>
+                    <item value="H"/>
+                    <item value="I"/>
+                    <item value="J"/>
+                    <item value="K"/>
+                    <item value="L"/>
+                    <item value="M"/>
+                    <item value="N"/>
+                    <item value="O"/>
+                    <item value="P"/>
+                    <item value="Q"/>
+                    <item value="R"/>
+                    <item value="S"/>
+                    <item value="T"/>
+                    <item value="U"/>
+                    <item value="V"/>
+                    <item value="W"/>
+                    <item value="X"/>
+                    <item value="Y"/>
+                    <item value="Z"/>
+                  </model>
+                </properties>
+              </component>
+              <component id="43c36" class="javax.swing.JComboBox" binding="key9">
+                <constraints>
+                  <grid row="8" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="2" anchor="8" fill="1" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties>
+                  <model>
+                    <item value="Not selected"/>
+                    <item value="A"/>
+                    <item value="B"/>
+                    <item value="C"/>
+                    <item value="D"/>
+                    <item value="E"/>
+                    <item value="F"/>
+                    <item value="G"/>
+                    <item value="H"/>
+                    <item value="I"/>
+                    <item value="J"/>
+                    <item value="K"/>
+                    <item value="L"/>
+                    <item value="M"/>
+                    <item value="N"/>
+                    <item value="O"/>
+                    <item value="P"/>
+                    <item value="Q"/>
+                    <item value="R"/>
+                    <item value="S"/>
+                    <item value="T"/>
+                    <item value="U"/>
+                    <item value="V"/>
+                    <item value="W"/>
+                    <item value="X"/>
+                    <item value="Y"/>
+                    <item value="Z"/>
+                  </model>
+                </properties>
+              </component>
+              <component id="3bb36" class="javax.swing.JComboBox" binding="key10">
+                <constraints>
+                  <grid row="9" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="2" anchor="8" fill="1" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties>
+                  <model>
+                    <item value="Not selected"/>
+                    <item value="A"/>
+                    <item value="B"/>
+                    <item value="C"/>
+                    <item value="D"/>
+                    <item value="E"/>
+                    <item value="F"/>
+                    <item value="G"/>
+                    <item value="H"/>
+                    <item value="I"/>
+                    <item value="J"/>
+                    <item value="K"/>
+                    <item value="L"/>
+                    <item value="M"/>
+                    <item value="N"/>
+                    <item value="O"/>
+                    <item value="P"/>
+                    <item value="Q"/>
+                    <item value="R"/>
+                    <item value="S"/>
+                    <item value="T"/>
+                    <item value="U"/>
+                    <item value="V"/>
+                    <item value="W"/>
+                    <item value="X"/>
+                    <item value="Y"/>
+                    <item value="Z"/>
+                  </model>
+                </properties>
+              </component>
+              <component id="345ef" class="javax.swing.JTextField" binding="delay1">
+                <constraints>
+                  <grid row="0" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
+                    <minimum-size width="50" height="-1"/>
+                  </grid>
+                </constraints>
+                <properties>
+                  <text value="30"/>
+                </properties>
+              </component>
+              <component id="86cdd" class="javax.swing.JTextField" binding="delay2">
+                <constraints>
+                  <grid row="1" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties>
+                  <text value="30"/>
+                </properties>
+              </component>
+              <component id="1ce7b" class="javax.swing.JTextField" binding="delay3">
+                <constraints>
+                  <grid row="2" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties>
+                  <text value="30"/>
+                </properties>
+              </component>
+              <component id="4185c" class="javax.swing.JTextField" binding="delay4">
+                <constraints>
+                  <grid row="3" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties>
+                  <text value="30"/>
+                </properties>
+              </component>
+              <component id="8d8a9" class="javax.swing.JTextField" binding="delay5">
+                <constraints>
+                  <grid row="4" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties>
+                  <text value="30"/>
+                </properties>
+              </component>
+              <component id="a4f37" class="javax.swing.JTextField" binding="delay6">
+                <constraints>
+                  <grid row="5" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties>
+                  <text value="30"/>
+                </properties>
+              </component>
+              <component id="9ec0e" class="javax.swing.JTextField" binding="delay7">
+                <constraints>
+                  <grid row="6" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties>
+                  <text value="30"/>
+                </properties>
+              </component>
+              <component id="d88b6" class="javax.swing.JTextField" binding="delay8">
+                <constraints>
+                  <grid row="7" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties>
+                  <text value="30"/>
+                </properties>
+              </component>
+              <component id="a812" class="javax.swing.JTextField" binding="delay9">
+                <constraints>
+                  <grid row="8" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties>
+                  <text value="30"/>
+                </properties>
+              </component>
+              <component id="6ab1f" class="javax.swing.JTextField" binding="delay10">
+                <constraints>
+                  <grid row="9" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties>
+                  <text value="30"/>
+                </properties>
+              </component>
+            </children>
+          </grid>
+          <grid id="a6d2d" layout-manager="GridLayoutManager" row-count="7" column-count="3" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+            <margin top="10" left="20" bottom="10" right="20"/>
+            <constraints>
+              <tabbedpane title="Buff"/>
+            </constraints>
+            <properties/>
+            <border type="none"/>
+            <children>
+              <component id="8068a" class="javax.swing.JLabel" binding="l_buff1">
+                <constraints>
+                  <grid row="2" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties>
+                  <enabled value="false"/>
+                  <text value="Buff 1"/>
+                </properties>
+              </component>
+              <component id="34932" class="javax.swing.JLabel" binding="l_buff2">
+                <constraints>
+                  <grid row="3" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties>
+                  <enabled value="false"/>
+                  <text value="Buff 2"/>
+                </properties>
+              </component>
+              <component id="38958" class="javax.swing.JLabel" binding="l_buff3">
+                <constraints>
+                  <grid row="4" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties>
+                  <enabled value="false"/>
+                  <text value="Buff 3"/>
+                </properties>
+              </component>
+              <component id="5bfd3" class="javax.swing.JLabel" binding="l_buff4">
+                <constraints>
+                  <grid row="5" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties>
+                  <enabled value="false"/>
+                  <text value="Buff 4"/>
+                </properties>
+              </component>
+              <component id="f915a" class="javax.swing.JLabel" binding="l_buff5">
+                <constraints>
+                  <grid row="6" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties>
+                  <enabled value="false"/>
+                  <text value="Buff 5"/>
+                </properties>
+              </component>
+              <component id="83ff0" class="javax.swing.JComboBox" binding="keyBuff1">
+                <constraints>
+                  <grid row="2" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="2" anchor="8" fill="1" indent="0" use-parent-layout="false">
+                    <minimum-size width="200" height="-1"/>
+                  </grid>
+                </constraints>
+                <properties>
+                  <editable value="false"/>
+                  <enabled value="false"/>
+                  <model>
+                    <item value="Not selected"/>
+                    <item value="A"/>
+                    <item value="B"/>
+                    <item value="C"/>
+                    <item value="D"/>
+                    <item value="E"/>
+                    <item value="F"/>
+                    <item value="G"/>
+                    <item value="H"/>
+                    <item value="I"/>
+                    <item value="J"/>
+                    <item value="K"/>
+                    <item value="L"/>
+                    <item value="M"/>
+                    <item value="N"/>
+                    <item value="O"/>
+                    <item value="P"/>
+                    <item value="Q"/>
+                    <item value="R"/>
+                    <item value="S"/>
+                    <item value="T"/>
+                    <item value="U"/>
+                    <item value="V"/>
+                    <item value="W"/>
+                    <item value="X"/>
+                    <item value="Y"/>
+                    <item value="Z"/>
+                  </model>
+                </properties>
+              </component>
+              <component id="3c90e" class="javax.swing.JComboBox" binding="keyBuff2">
+                <constraints>
+                  <grid row="3" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="2" anchor="8" fill="1" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties>
+                  <enabled value="false"/>
+                  <model>
+                    <item value="Not selected"/>
+                    <item value="A"/>
+                    <item value="B"/>
+                    <item value="C"/>
+                    <item value="D"/>
+                    <item value="E"/>
+                    <item value="F"/>
+                    <item value="G"/>
+                    <item value="H"/>
+                    <item value="I"/>
+                    <item value="J"/>
+                    <item value="K"/>
+                    <item value="L"/>
+                    <item value="M"/>
+                    <item value="N"/>
+                    <item value="O"/>
+                    <item value="P"/>
+                    <item value="Q"/>
+                    <item value="R"/>
+                    <item value="S"/>
+                    <item value="T"/>
+                    <item value="U"/>
+                    <item value="V"/>
+                    <item value="W"/>
+                    <item value="X"/>
+                    <item value="Y"/>
+                    <item value="Z"/>
+                  </model>
+                </properties>
+              </component>
+              <component id="96385" class="javax.swing.JComboBox" binding="keyBuff3">
+                <constraints>
+                  <grid row="4" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="2" anchor="8" fill="1" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties>
+                  <enabled value="false"/>
+                  <model>
+                    <item value="Not selected"/>
+                    <item value="A"/>
+                    <item value="B"/>
+                    <item value="C"/>
+                    <item value="D"/>
+                    <item value="E"/>
+                    <item value="F"/>
+                    <item value="G"/>
+                    <item value="H"/>
+                    <item value="I"/>
+                    <item value="J"/>
+                    <item value="K"/>
+                    <item value="L"/>
+                    <item value="M"/>
+                    <item value="N"/>
+                    <item value="O"/>
+                    <item value="P"/>
+                    <item value="Q"/>
+                    <item value="R"/>
+                    <item value="S"/>
+                    <item value="T"/>
+                    <item value="U"/>
+                    <item value="V"/>
+                    <item value="W"/>
+                    <item value="X"/>
+                    <item value="Y"/>
+                    <item value="Z"/>
+                  </model>
+                </properties>
+              </component>
+              <component id="7f212" class="javax.swing.JComboBox" binding="keyBuff4">
+                <constraints>
+                  <grid row="5" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="2" anchor="8" fill="1" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties>
+                  <enabled value="false"/>
+                  <model>
+                    <item value="Not selected"/>
+                    <item value="A"/>
+                    <item value="B"/>
+                    <item value="C"/>
+                    <item value="D"/>
+                    <item value="E"/>
+                    <item value="F"/>
+                    <item value="G"/>
+                    <item value="H"/>
+                    <item value="I"/>
+                    <item value="J"/>
+                    <item value="K"/>
+                    <item value="L"/>
+                    <item value="M"/>
+                    <item value="N"/>
+                    <item value="O"/>
+                    <item value="P"/>
+                    <item value="Q"/>
+                    <item value="R"/>
+                    <item value="S"/>
+                    <item value="T"/>
+                    <item value="U"/>
+                    <item value="V"/>
+                    <item value="W"/>
+                    <item value="X"/>
+                    <item value="Y"/>
+                    <item value="Z"/>
+                  </model>
+                </properties>
+              </component>
+              <component id="1117e" class="javax.swing.JComboBox" binding="keyBuff5">
+                <constraints>
+                  <grid row="6" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="2" anchor="8" fill="1" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties>
+                  <enabled value="false"/>
+                  <model>
+                    <item value="Not selected"/>
+                    <item value="A"/>
+                    <item value="B"/>
+                    <item value="C"/>
+                    <item value="D"/>
+                    <item value="E"/>
+                    <item value="F"/>
+                    <item value="G"/>
+                    <item value="H"/>
+                    <item value="I"/>
+                    <item value="J"/>
+                    <item value="K"/>
+                    <item value="L"/>
+                    <item value="M"/>
+                    <item value="N"/>
+                    <item value="O"/>
+                    <item value="P"/>
+                    <item value="Q"/>
+                    <item value="R"/>
+                    <item value="S"/>
+                    <item value="T"/>
+                    <item value="U"/>
+                    <item value="V"/>
+                    <item value="W"/>
+                    <item value="X"/>
+                    <item value="Y"/>
+                    <item value="Z"/>
+                  </model>
+                </properties>
+              </component>
+              <component id="29073" class="javax.swing.JTextField" binding="delayBuff1">
+                <constraints>
+                  <grid row="2" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
+                    <minimum-size width="50" height="-1"/>
+                  </grid>
+                </constraints>
+                <properties>
+                  <enabled value="false"/>
+                  <text value="1500"/>
+                </properties>
+              </component>
+              <component id="df850" class="javax.swing.JTextField" binding="delayBuff2">
+                <constraints>
+                  <grid row="3" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties>
+                  <enabled value="false"/>
+                  <text value="1500"/>
+                </properties>
+              </component>
+              <component id="86fe1" class="javax.swing.JTextField" binding="delayBuff3">
+                <constraints>
+                  <grid row="4" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties>
+                  <enabled value="false"/>
+                  <text value="1500"/>
+                </properties>
+              </component>
+              <component id="9676b" class="javax.swing.JTextField" binding="delayBuff4">
+                <constraints>
+                  <grid row="5" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties>
+                  <enabled value="false"/>
+                  <text value="1500"/>
+                </properties>
+              </component>
+              <component id="b062d" class="javax.swing.JTextField" binding="delayBuff5">
+                <constraints>
+                  <grid row="6" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties>
+                  <enabled value="false"/>
+                  <text value="1500"/>
+                </properties>
+              </component>
+              <component id="39058" class="javax.swing.JLabel">
+                <constraints>
+                  <grid row="0" column="0" row-span="1" col-span="2" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties>
+                  <text value="Use auto buff ?"/>
+                </properties>
+              </component>
+              <component id="12fe1" class="javax.swing.JCheckBox" binding="autoBuff">
+                <constraints>
+                  <grid row="0" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties>
+                  <text value=""/>
+                </properties>
+              </component>
+              <component id="e6038" class="javax.swing.JLabel" binding="l_buff">
+                <constraints>
+                  <grid row="1" column="0" row-span="1" col-span="2" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties>
+                  <enabled value="false"/>
+                  <text value="Auto buff after every (s)"/>
+                </properties>
+              </component>
+              <component id="8c391" class="javax.swing.JTextField" binding="delayBuff">
+                <constraints>
+                  <grid row="1" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
+                    <minimum-size width="50" height="-1"/>
+                  </grid>
+                </constraints>
+                <properties>
+                  <enabled value="false"/>
+                  <text value="1"/>
+                </properties>
+              </component>
+            </children>
+          </grid>
+          <grid id="2147e" layout-manager="GridLayoutManager" row-count="2" column-count="3" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+            <margin top="10" left="20" bottom="10" right="20"/>
+            <constraints>
+              <tabbedpane title="Hp, Mp"/>
+            </constraints>
+            <properties/>
+            <border type="none"/>
+            <children>
+              <component id="9784" class="javax.swing.JLabel">
+                <constraints>
+                  <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties>
+                  <enabled value="true"/>
+                  <text value="HP"/>
+                </properties>
+              </component>
+              <component id="ff8c1" class="javax.swing.JComboBox" binding="keyHp">
+                <constraints>
+                  <grid row="0" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="2" anchor="8" fill="1" indent="0" use-parent-layout="false">
+                    <minimum-size width="200" height="-1"/>
+                  </grid>
+                </constraints>
+                <properties>
+                  <editable value="false"/>
+                  <enabled value="true"/>
+                  <model>
+                    <item value="Not selected"/>
+                    <item value="A"/>
+                    <item value="B"/>
+                    <item value="C"/>
+                    <item value="D"/>
+                    <item value="E"/>
+                    <item value="F"/>
+                    <item value="G"/>
+                    <item value="H"/>
+                    <item value="I"/>
+                    <item value="J"/>
+                    <item value="K"/>
+                    <item value="L"/>
+                    <item value="M"/>
+                    <item value="N"/>
+                    <item value="O"/>
+                    <item value="P"/>
+                    <item value="Q"/>
+                    <item value="R"/>
+                    <item value="S"/>
+                    <item value="T"/>
+                    <item value="U"/>
+                    <item value="V"/>
+                    <item value="W"/>
+                    <item value="X"/>
+                    <item value="Y"/>
+                    <item value="Z"/>
+                  </model>
+                </properties>
+              </component>
+              <component id="6cd16" class="javax.swing.JTextField" binding="delayHp">
+                <constraints>
+                  <grid row="0" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties>
+                  <editable value="true"/>
+                  <enabled value="true"/>
+                  <text value="1"/>
+                </properties>
+              </component>
+              <component id="a49a6" class="javax.swing.JLabel">
+                <constraints>
+                  <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties>
+                  <enabled value="true"/>
+                  <text value="MP"/>
+                </properties>
+              </component>
+              <component id="77917" class="javax.swing.JComboBox" binding="keyMp">
+                <constraints>
+                  <grid row="1" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="2" anchor="8" fill="1" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties>
+                  <enabled value="true"/>
+                  <model>
+                    <item value="Not selected"/>
+                    <item value="A"/>
+                    <item value="B"/>
+                    <item value="C"/>
+                    <item value="D"/>
+                    <item value="E"/>
+                    <item value="F"/>
+                    <item value="G"/>
+                    <item value="H"/>
+                    <item value="I"/>
+                    <item value="J"/>
+                    <item value="K"/>
+                    <item value="L"/>
+                    <item value="M"/>
+                    <item value="N"/>
+                    <item value="O"/>
+                    <item value="P"/>
+                    <item value="Q"/>
+                    <item value="R"/>
+                    <item value="S"/>
+                    <item value="T"/>
+                    <item value="U"/>
+                    <item value="V"/>
+                    <item value="W"/>
+                    <item value="X"/>
+                    <item value="Y"/>
+                    <item value="Z"/>
+                  </model>
+                </properties>
+              </component>
+              <component id="82d62" class="javax.swing.JTextField" binding="delayMp">
+                <constraints>
+                  <grid row="1" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
+                    <minimum-size width="50" height="-1"/>
+                  </grid>
+                </constraints>
+                <properties>
+                  <enabled value="true"/>
+                  <text value="1"/>
+                </properties>
+              </component>
+            </children>
+          </grid>
+          <grid id="8cab2" layout-manager="GridLayoutManager" row-count="3" column-count="4" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+            <margin top="10" left="20" bottom="10" right="20"/>
+            <constraints>
+              <tabbedpane title="Run"/>
+            </constraints>
+            <properties>
+              <enabled value="true"/>
+            </properties>
+            <border type="none"/>
+            <children>
+              <component id="522ae" class="javax.swing.JLabel" binding="l_runLeft">
+                <constraints>
+                  <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties>
+                  <enabled value="false"/>
+                  <text value="Run Left"/>
+                </properties>
+              </component>
+              <component id="4e439" class="javax.swing.JTextField" binding="delayRunLeft">
+                <constraints>
+                  <grid row="1" column="1" row-span="1" col-span="3" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
+                    <minimum-size width="50" height="-1"/>
+                  </grid>
+                </constraints>
+                <properties>
+                  <enabled value="false"/>
+                  <text value="0"/>
+                </properties>
+              </component>
+              <component id="2f59b" class="javax.swing.JLabel" binding="l_runRight">
+                <constraints>
+                  <grid row="2" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties>
+                  <enabled value="false"/>
+                  <text value="Run Right"/>
+                </properties>
+              </component>
+              <component id="62db4" class="javax.swing.JTextField" binding="delayRunRight">
+                <constraints>
+                  <grid row="2" column="1" row-span="1" col-span="3" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
+                    <preferred-size width="150" height="-1"/>
+                  </grid>
+                </constraints>
+                <properties>
+                  <enabled value="false"/>
+                  <text value="0"/>
+                </properties>
+              </component>
+              <component id="2d989" class="javax.swing.JLabel">
+                <constraints>
+                  <grid row="0" column="0" row-span="1" col-span="3" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties>
+                  <enabled value="false"/>
+                  <text value="Use auto run ?"/>
+                </properties>
+              </component>
+              <component id="ccb66" class="javax.swing.JCheckBox" binding="autoRun">
+                <constraints>
+                  <grid row="0" column="3" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties>
+                  <enabled value="false"/>
+                  <text value=""/>
+                </properties>
+              </component>
+            </children>
+          </grid>
+        </children>
+      </tabbedpane>
+      <component id="25518" class="javax.swing.JLabel" binding="content">
+        <constraints>
+          <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <text value="SSO Supporter"/>
+        </properties>
+      </component>
+      <component id="12ca9" class="javax.swing.JLabel" binding="l_status">
+        <constraints>
+          <grid row="2" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <text value="Program is stopped."/>
+        </properties>
+      </component>
+      <component id="cba37" class="javax.swing.JButton" binding="b_run">
+        <constraints>
+          <grid row="3" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false">
+            <maximum-size width="300" height="-1"/>
+          </grid>
+        </constraints>
+        <properties>
+          <text value="Run"/>
+        </properties>
+      </component>
+      <component id="911a5" class="javax.swing.JButton" binding="b_auto">
+        <constraints>
+          <grid row="4" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false">
+            <maximum-size width="300" height="-1"/>
+          </grid>
+        </constraints>
+        <properties>
+          <text value="Auto"/>
+        </properties>
+      </component>
+    </children>
+  </grid>
+</form>
