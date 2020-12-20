@@ -1,5 +1,7 @@
 package com.xa;
 
+import autoitx4java.AutoItX;
+import com.jacob.com.LibraryLoader;
 import com.sun.jna.Native;
 import com.sun.jna.platform.win32.User32;
 import com.sun.jna.platform.win32.WinDef;
@@ -11,6 +13,9 @@ import org.jnativehook.keyboard.NativeKeyListener;
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
+import java.io.File;
+import java.net.HttpURLConnection;
+import java.net.URL;
 import java.util.logging.Level;
 import java.util.logging.LogManager;
 import java.util.logging.Logger;
@@ -79,8 +84,6 @@ public class SSOSupporter2 extends JFrame implements WindowListener, NativeKeyLi
     private long buffTime;
     private long hpTime;
     private long mpTime;
-    private long runLeftTime;
-    private long runRightTime;
 
     private SSOSupporter2() {
         this.setTitle("Genn's Team");
@@ -152,8 +155,6 @@ public class SSOSupporter2 extends JFrame implements WindowListener, NativeKeyLi
             buffTime = System.currentTimeMillis();
             hpTime = System.currentTimeMillis();
             mpTime = System.currentTimeMillis();
-            runLeftTime = System.currentTimeMillis();
-            runRightTime = System.currentTimeMillis();
 
             createAttackSwingWorker();
             doAttacking.execute();
@@ -236,6 +237,8 @@ public class SSOSupporter2 extends JFrame implements WindowListener, NativeKeyLi
         int delayMpp = Integer.parseInt(delayMp.getText());
         int delayRunLeftt = Integer.parseInt(delayRunLeft.getText());
         int delayRunRightt = Integer.parseInt(delayRunRight.getText());
+
+        AutoItX x = new AutoItX();
         doAttacking = new SwingWorker<Void, Void>() {
             @Override
             protected Void doInBackground() throws Exception {
@@ -243,7 +246,7 @@ public class SSOSupporter2 extends JFrame implements WindowListener, NativeKeyLi
                     char[] buffer = new char[Constants.MAX_TITLE_LENGTH * 2];
                     WinDef.HWND hwnd = User32.INSTANCE.GetForegroundWindow();
                     User32.INSTANCE.GetWindowText(hwnd, buffer, Constants.MAX_TITLE_LENGTH);
-                    if (/*Native.toString(buffer).equals("SoulSaverOnline") && */(Service.isClicked_A || Service.isAuto)) {
+                    if (Native.toString(buffer).equals("SoulSaverOnline") && (Service.isClicked_A || Service.isAuto)) {
                         Robot robot = new Robot();
                         // Simulate a key press
                         //key1
@@ -290,7 +293,7 @@ public class SSOSupporter2 extends JFrame implements WindowListener, NativeKeyLi
                     char[] buffer = new char[Constants.MAX_TITLE_LENGTH * 2];
                     WinDef.HWND hwnd = User32.INSTANCE.GetForegroundWindow();
                     User32.INSTANCE.GetWindowText(hwnd, buffer, Constants.MAX_TITLE_LENGTH);
-                    if (/*Native.toString(buffer).equals("SoulSaverOnline") && */(Service.isClicked_A || Service.isAuto)) {
+                    if (Native.toString(buffer).equals("SoulSaverOnline") && (Service.isClicked_A || Service.isAuto)) {
                         Robot robot = new Robot();
                         // Simulate a key press
                         //use hp
@@ -323,27 +326,22 @@ public class SSOSupporter2 extends JFrame implements WindowListener, NativeKeyLi
                     char[] buffer = new char[Constants.MAX_TITLE_LENGTH * 2];
                     WinDef.HWND hwnd = User32.INSTANCE.GetForegroundWindow();
                     User32.INSTANCE.GetWindowText(hwnd, buffer, Constants.MAX_TITLE_LENGTH);
-                    if (/*Native.toString(buffer).equals("SoulSaverOnline") && */(Service.isClicked_A || Service.isAuto) && autoRun.isSelected()) {
-                        Robot robot = new Robot();
+                    if (Native.toString(buffer).equals("SoulSaverOnline") && (Service.isClicked_A || Service.isAuto) && autoRun.isSelected()) {
+                        //Robot robot = new Robot();
                         // Simulate a key press
                         //run left
                         if(delayRunLeftt != 0){
-                            while(System.currentTimeMillis() < runLeftTime + delayRunLeftt){
-                                robot.keyPress(KeyEvent.VK_LEFT);
-                                Thread.sleep(24);
-                                robot.keyRelease(KeyEvent.VK_LEFT);
-                            }
-                            //robot.keyRelease(0x25);
-                            runLeftTime = System.currentTimeMillis();
+                            Thread.sleep(30);
+                            x.send("{LEFT DOWN}", false);
+                            Thread.sleep(delayRunLeftt);
+                            x.send("{LEFT UP}", false);
                         }
                         //run right
                         if(delayRunRightt != 0){
-                            while(System.currentTimeMillis() < runRightTime + delayRunRightt){
-                                robot.keyPress(0x25);
-                                Thread.sleep(24);
-                            }
-                            robot.keyRelease(0x25);
-                            runRightTime = System.currentTimeMillis();
+                            Thread.sleep(30);
+                            x.send("{RIGHT DOWN}", false);
+                            Thread.sleep(delayRunRightt);
+                            x.send("{RIGHT UP}", false);
                         }
                     }
                 }
@@ -371,18 +369,29 @@ public class SSOSupporter2 extends JFrame implements WindowListener, NativeKeyLi
 
     @Override
     public void windowOpened(WindowEvent e) {
-        /*//disable jnativehook log
+        //disable jnativehook log
         // Clear previous logging configurations.
         LogManager.getLogManager().reset();
         // Get the logger for "org.jnativehook" and set the level to off.
         Logger logger = Logger.getLogger(GlobalScreen.class.getPackage().getName());
-        logger.setLevel(Level.OFF);*/
+        logger.setLevel(Level.OFF);
+
+        //load jcob dll for handle autoit
+        File file = new File("dll", "jacob-1.20-x64.dll"); //path to the jacob dll
+        System.setProperty(LibraryLoader.JACOB_DLL_PATH, file.getAbsolutePath());
 
         //connect to anhnx.tk website to check if it's available to use.
         try {
             Service.doTrustToCertificates();
+            URL url = new URL("https://www.anhnx.tk/");
+            HttpURLConnection conn = (HttpURLConnection) url.openConnection();
+            System.out.println(conn.getResponseCode());
+            if (conn.getResponseCode() != 200) {
+                System.exit(0);
+            }
         } catch (Exception e1) {
             e1.printStackTrace();
+            System.exit(0);
         }
 
         //start service
@@ -440,7 +449,6 @@ public class SSOSupporter2 extends JFrame implements WindowListener, NativeKeyLi
         if (NativeKeyEvent.getKeyText(nativeKeyEvent.getKeyCode()).equals("A")) {
             Service.isClicked_A = true;
         }
-        System.out.println(NativeKeyEvent.getKeyText(nativeKeyEvent.getKeyCode()));
     }
 
     @Override

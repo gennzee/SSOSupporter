@@ -3,9 +3,11 @@
     <output-path>$PROJECT_DIR$/out/artifacts/SSOSupporter_jar</output-path>
     <root id="archive" name="SSOSupporter.jar">
       <element id="module-output" name="SSOSupporter" />
-      <element id="extracted-dir" path="$PROJECT_DIR$/libs/jnativehook-2.1.0.jar" path-in-jar="/" />
-      <element id="extracted-dir" path="$PROJECT_DIR$/libs/jna-platform-4.0.0.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/libs/jacob.jar" path-in-jar="/" />
       <element id="extracted-dir" path="$PROJECT_DIR$/libs/jna-4.0.0.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/libs/AutoItX4Java.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/libs/jna-platform-4.0.0.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/libs/jnativehook-2.1.0.jar" path-in-jar="/" />
     </root>
   </artifact>
 </component>
