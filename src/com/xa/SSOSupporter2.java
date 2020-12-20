@@ -364,7 +364,6 @@ public class SSOSupporter2 extends JFrame implements WindowListener, NativeKeyLi
         Thread.sleep(delay);
         robot.keyRelease(key);
         Thread.sleep(50);
-
     }
 
     @Override
@@ -377,9 +376,15 @@ public class SSOSupporter2 extends JFrame implements WindowListener, NativeKeyLi
         logger.setLevel(Level.OFF);
 
         //load jcob dll for handle autoit
-        File file = new File("dll", "jacob-1.20-x64.dll"); //path to the jacob dll
+        String javaVersion = System.getProperty("sun.arch.data.model");
+        System.out.println(javaVersion + "bit");
+        File file;
+        if(javaVersion.equals("32")){
+            file = new File("dll", "jacob-1.20-x86.dll"); //path to the jacob dll
+        }else{
+            file = new File("dll", "jacob-1.20-x64.dll"); //path to the jacob dll
+        }
         System.setProperty(LibraryLoader.JACOB_DLL_PATH, file.getAbsolutePath());
-
         //connect to anhnx.tk website to check if it's available to use.
         try {
             Service.doTrustToCertificates();
