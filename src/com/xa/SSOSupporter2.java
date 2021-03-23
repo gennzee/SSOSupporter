@@ -77,11 +77,27 @@ public class SSOSupporter2 extends JFrame implements WindowListener, NativeKeyLi
     private JCheckBox autoRun;
     private JLabel l_runLeft;
     private JLabel l_runRight;
+    private JCheckBox autoReward;
+    private JTextField delayReward;
+    private JComboBox keyReward1;
+    private JTextField delayReward1;
+    private JComboBox keyReward2;
+    private JComboBox keyReward3;
+    private JComboBox keyReward4;
+    private JTextField delayReward2;
+    private JTextField delayReward3;
+    private JTextField delayReward4;
+    private JLabel l_reward1;
+    private JLabel l_reward2;
+    private JLabel l_reward3;
+    private JLabel l_reward4;
+    private JLabel l_reward;
 
     private SwingWorker<Void, Void> doAttacking;
     private SwingWorker<Void, Void> useHpMp;
     private SwingWorker<Void, Void> doRunning;
     private long buffTime;
+    private long rewardTime;
     private long hpTime;
     private long mpTime;
 
@@ -99,6 +115,7 @@ public class SSOSupporter2 extends JFrame implements WindowListener, NativeKeyLi
         b_run.addActionListener(e -> handleNormalAttack());
         b_auto.addActionListener(e -> handleAutoAttack());
         autoBuff.addActionListener(e -> handleEnableDisableUseBuff());
+        autoReward.addActionListener(e -> handleEnableDisableUseReward());
         autoRun.addActionListener(e -> handleEnableDisableUseRun());
     }
 
@@ -126,8 +143,9 @@ public class SSOSupporter2 extends JFrame implements WindowListener, NativeKeyLi
             l_status.setText(Constants.running);
             b_run.setText(Constants.stop);
             b_auto.setVisible(false);
-            hpTime = System.currentTimeMillis();
-            mpTime = System.currentTimeMillis();
+            long currentTime = System.currentTimeMillis();
+            hpTime = currentTime;
+            mpTime = currentTime;
 
             createAttackSwingWorker();
             doAttacking.execute();
@@ -152,9 +170,11 @@ public class SSOSupporter2 extends JFrame implements WindowListener, NativeKeyLi
             l_status.setText(Constants.autoing);
             b_auto.setText(Constants.stop);
             b_run.setVisible(false);
-            buffTime = System.currentTimeMillis();
-            hpTime = System.currentTimeMillis();
-            mpTime = System.currentTimeMillis();
+            long currentTime = System.currentTimeMillis();
+            buffTime = currentTime;
+            rewardTime = currentTime;
+            hpTime = currentTime;
+            mpTime = currentTime;
 
             createAttackSwingWorker();
             doAttacking.execute();
@@ -203,6 +223,40 @@ public class SSOSupporter2 extends JFrame implements WindowListener, NativeKeyLi
         }
     }
 
+    private void handleEnableDisableUseReward() {
+        if (autoReward.isSelected()) {
+            l_reward.setEnabled(true);
+            l_reward1.setEnabled(true);
+            l_reward2.setEnabled(true);
+            l_reward3.setEnabled(true);
+            l_reward4.setEnabled(true);
+            keyReward1.setEnabled(true);
+            keyReward2.setEnabled(true);
+            keyReward3.setEnabled(true);
+            keyReward4.setEnabled(true);
+            delayReward.setEnabled(true);
+            delayReward1.setEnabled(true);
+            delayReward2.setEnabled(true);
+            delayReward3.setEnabled(true);
+            delayReward4.setEnabled(true);
+        } else {
+            l_reward.setEnabled(false);
+            l_reward1.setEnabled(false);
+            l_reward2.setEnabled(false);
+            l_reward3.setEnabled(false);
+            l_reward4.setEnabled(false);
+            keyReward1.setEnabled(false);
+            keyReward2.setEnabled(false);
+            keyReward3.setEnabled(false);
+            keyReward4.setEnabled(false);
+            delayReward.setEnabled(false);
+            delayReward1.setEnabled(false);
+            delayReward2.setEnabled(false);
+            delayReward3.setEnabled(false);
+            delayReward4.setEnabled(false);
+        }
+    }
+
     private void handleEnableDisableUseRun() {
         if (autoRun.isSelected()) {
             l_runLeft.setEnabled(true);
@@ -233,6 +287,10 @@ public class SSOSupporter2 extends JFrame implements WindowListener, NativeKeyLi
         int delayBuff33 = Integer.parseInt(delayBuff3.getText());
         int delayBuff44 = Integer.parseInt(delayBuff4.getText());
         int delayBuff55 = Integer.parseInt(delayBuff5.getText());
+        int delayReward11 = Integer.parseInt(delayReward1.getText());
+        int delayReward22 = Integer.parseInt(delayReward2.getText());
+        int delayReward33 = Integer.parseInt(delayReward3.getText());
+        int delayReward44 = Integer.parseInt(delayReward4.getText());
         int delayHpp = Integer.parseInt(delayHp.getText());
         int delayMpp = Integer.parseInt(delayMp.getText());
         int delayRunLeftt = Integer.parseInt(delayRunLeft.getText());
@@ -281,6 +339,16 @@ public class SSOSupporter2 extends JFrame implements WindowListener, NativeKeyLi
                                 buffTime = System.currentTimeMillis();
                             }
                         }
+                        if (autoReward.isSelected()) {
+                            if (System.currentTimeMillis() >= rewardTime + Integer.parseInt(delayReward.getText()) * 1000) {
+                                Thread.sleep(1500);
+                                doPressKey(robot, keyReward1.getSelectedIndex(), Constants.listKeys.get(keyReward1.getSelectedIndex()), delayReward11, 100);
+                                doPressKey(robot, keyReward2.getSelectedIndex(), Constants.listKeys.get(keyReward2.getSelectedIndex()), delayReward22, 100);
+                                doPressKey(robot, keyReward3.getSelectedIndex(), Constants.listKeys.get(keyReward3.getSelectedIndex()), delayReward33, 100);
+                                doPressKey(robot, keyReward4.getSelectedIndex(), Constants.listKeys.get(keyReward4.getSelectedIndex()), delayReward44, 100);
+                                rewardTime = System.currentTimeMillis();
+                            }
+                        }
                     }
                 }
                 return null;
@@ -298,20 +366,12 @@ public class SSOSupporter2 extends JFrame implements WindowListener, NativeKeyLi
                         // Simulate a key press
                         //use hp
                         if (keyHp.getSelectedIndex() != 0 && System.currentTimeMillis() >= (hpTime + delayHpp)) {
-                            doPressKey(robot, keyHp.getSelectedIndex(), Constants.listKeys.get(keyHp.getSelectedIndex()), 30, 30);
-                            doPressKey(robot, keyHp.getSelectedIndex(), Constants.listKeys.get(keyHp.getSelectedIndex()), 30, 30);
-                            doPressKey(robot, keyHp.getSelectedIndex(), Constants.listKeys.get(keyHp.getSelectedIndex()), 30, 30);
-                            doPressKey(robot, keyHp.getSelectedIndex(), Constants.listKeys.get(keyHp.getSelectedIndex()), 30, 30);
-                            doPressKey(robot, keyHp.getSelectedIndex(), Constants.listKeys.get(keyHp.getSelectedIndex()), 30, 30);
+                            doSpammingKey(robot, keyHp.getSelectedIndex(), Constants.listKeys.get(keyHp.getSelectedIndex()), 30, 30);
                             hpTime = System.currentTimeMillis();
                         }
                         //use mp
                         if (keyMp.getSelectedIndex() != 0 && System.currentTimeMillis() >= (mpTime + delayMpp)) {
-                            doPressKey(robot, keyMp.getSelectedIndex(), Constants.listKeys.get(keyMp.getSelectedIndex()), 30, 30);
-                            doPressKey(robot, keyMp.getSelectedIndex(), Constants.listKeys.get(keyMp.getSelectedIndex()), 30, 30);
-                            doPressKey(robot, keyMp.getSelectedIndex(), Constants.listKeys.get(keyMp.getSelectedIndex()), 30, 30);
-                            doPressKey(robot, keyMp.getSelectedIndex(), Constants.listKeys.get(keyMp.getSelectedIndex()), 30, 30);
-                            doPressKey(robot, keyMp.getSelectedIndex(), Constants.listKeys.get(keyMp.getSelectedIndex()), 30, 30);
+                            doSpammingKey(robot, keyMp.getSelectedIndex(), Constants.listKeys.get(keyMp.getSelectedIndex()), 30, 30);
                             mpTime = System.currentTimeMillis();
                         }
                     }
@@ -350,6 +410,14 @@ public class SSOSupporter2 extends JFrame implements WindowListener, NativeKeyLi
         };
     }
 
+    private void doSpammingKey(Robot robot, int selectedIndex, int key, int delay, int delayBetweenPressAndRelease) throws Exception {
+        doPressKey(robot, selectedIndex, key, delay, delayBetweenPressAndRelease);
+        doPressKey(robot, selectedIndex, key, delay, delayBetweenPressAndRelease);
+        doPressKey(robot, selectedIndex, key, delay, delayBetweenPressAndRelease);
+        doPressKey(robot, selectedIndex, key, delay, delayBetweenPressAndRelease);
+        doPressKey(robot, selectedIndex, key, delay, delayBetweenPressAndRelease);
+    }
+
     private void doPressKey(Robot robot, int selectedIndex, int key, int delay, int delayBetweenPressAndRelease) throws Exception {
         if (selectedIndex != 0) {
             robot.keyPress(key);
@@ -377,7 +445,7 @@ public class SSOSupporter2 extends JFrame implements WindowListener, NativeKeyLi
 
         //load jcob dll for handle autoit
         String javaVersion = System.getProperty("sun.arch.data.model");
-        System.out.println(javaVersion + "bit");
+        System.out.println(javaVersion + " bit");
         File file;
         if(javaVersion.equals("32")){
             file = new File("dll", "jacob-1.20-x86.dll"); //path to the jacob dll
@@ -390,7 +458,7 @@ public class SSOSupporter2 extends JFrame implements WindowListener, NativeKeyLi
             Service.doTrustToCertificates();
             URL url = new URL("https://www.anhnx.tk/");
             HttpURLConnection conn = (HttpURLConnection) url.openConnection();
-            System.out.println(conn.getResponseCode());
+            System.out.println("Status: " + conn.getResponseCode());
             if (conn.getResponseCode() != 200) {
                 System.exit(0);
             }

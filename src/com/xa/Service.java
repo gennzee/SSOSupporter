@@ -8,13 +8,13 @@ import javax.net.ssl.X509TrustManager;
 /**
  * Created by tanks on 12/19/2020.
  */
-public class Service {
+class Service {
 
     static boolean isRunning = false;
     static boolean isClicked_A = false;
     static boolean isAuto = false;
 
-    public static void doTrustToCertificates() throws Exception {
+    static void doTrustToCertificates() throws Exception {
         TrustManager[] trustAllCerts = new TrustManager[]{
                 new X509TrustManager() {
                     public java.security.cert.X509Certificate[] getAcceptedIssuers() {
